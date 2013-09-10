@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
 #import "ASIHTTPRequestConfig.h"
+#import "SMHttpRequest.h"
 
 typedef enum _ASIPostFormat {
     ASIMultipartFormDataPostFormat = 0,
@@ -16,7 +17,7 @@ typedef enum _ASIPostFormat {
 	
 } ASIPostFormat;
 
-@interface ASIFormDataRequest : ASIHTTPRequest <NSCopying> {
+@interface ASIFormDataRequest : SMHttpRequest <NSCopying> {
 
 	// Parameters that will be POSTed to the url
 	NSMutableArray *postData;
